@@ -1,6 +1,6 @@
     @font-face {
         font-family: SweetSensations;
-        src: url(https://github.com/DorkYBru/PrismarineProject/blob/main/fonts/SS/SS.ttf?raw=true);
+        src: url(/fonts/SS/SS.ttf);
     }
     
     .reveal {
