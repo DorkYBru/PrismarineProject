@@ -1,0 +1,366 @@
+    @font-face {
+        font-family: SweetSensations;
+        src: url(/fonts/SS/SS.ttf);
+    }
+    
+    .reveal {
+        position: relative;
+        transform: translateY(150px);
+        opacity: 0;
+        transition: 2s all ease;
+    }
+    
+    .reveal.active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+        box-sizing: border-box;
+    }
+    
+    body {
+        background-color: #142850;
+        background-repeat: repeat;
+        margin: 0;
+        padding: 0;
+    }
+    
+    a,
+    a:hover,
+    a:focus,
+    a:active {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    section {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    
+    section .wave {
+        position: absolute;
+        width: 100%;
+        height: 143px;
+        bottom: 0;
+        Left: 0;
+        backgound: url('/asstes/waves/wave-top.png');
+        animation: animate 10s linear infinite;
+    }
+    
+    section .wave:before {
+        content: '';
+        width: 100%;
+        height: 143px;
+        background: url('/asstes/waves/wave-top-opacity.png');
+        position: absolute;
+        top: 0;
+        Left: 0;
+        opacity: 0.4;
+        animation: animate-reverse 10s linear infinite;
+    }
+    
+    section .wave:after {
+        content: '';
+        width: 100%;
+        height: 143px;
+        background: url('/asstes/waves/wave-top-opacity.png');
+        position: absolute;
+        top: 0;
+        Left: 0;
+        opacity: 0.4;
+        animation-delay: 0.6s;
+        animation: animate 20s linear infinite;
+    }
+    
+    @keyframes animate {
+        0% {
+            background-position: 0;
+        }
+        100% {
+            background-position: 1280px;
+        }
+    }
+    
+    @keyframes animate-reverse {
+        0% {
+            background-position: 1280px;
+        }
+        100% {
+            background-position: 0;
+        }
+    }
+    
+    .center {
+        text-align: center;
+        align-items: center;
+    }
+    
+    .footertext {
+        font-family: SweetSensations;
+        font-size: 25px;
+        text-decoration: none;
+        position: absolute;
+        bottom: 10px;
+        right: 50%;
+        left: 40%;
+        width: 20%;
+        color: whitesmoke;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    }
+    
+    .title {
+        top: 35%;
+        left: 50%;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .image {
+        border-radius: 30%;
+        box-shadow: inset;
+        position: absolute;
+        top: 35%;
+        left: 35%;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        position: relative;
+        flex-direction: column;
+    }
+    
+    ul li {
+        list-style: none;
+    }
+    
+    ul {
+        text-align: center;
+        align-items: center;
+    }
+    
+    ul li a {
+        position: relative;
+        display: inline-block;
+        padding: 6px 15px;
+        background: #0C7B93;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        overflow: hidden;
+        transition: 0.5s;
+        z-index: 1;
+    }
+    
+    ul:hover li a {
+        opacity: 0;
+    }
+    
+    ul li a:hover {
+        transform: scale(1.3);
+        background: #82DBD8;
+        opacity: 1;
+    }
+    
+    ul li a:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80px;
+        height: 100%;
+    }
+    
+    ul li:before {
+        content: attr(data-text);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 6em;
+        font-weight: 700;
+        pointer-events: none;
+        opacity: 0;
+        letter-spacing: 20px;
+        transition: 0.5s;
+        white-space: nowrap;
+    }
+    
+    .btn:active {
+        top: 2px;
+    }
+    
+    ul li:hover:before {
+        opacity: 0.5;
+        letter-spacing: 0px;
+    }
+    
+    .prismarine {
+        position: absolute;
+        color: whitesmoke;
+        font: 320% sans-serif;
+    }
+    
+    .loading {
+        position: absolute;
+        margin-left: -2.5em;
+        color: darkcyan;
+        font: 320% sans-serif;
+    }
+    
+    .loading:before {
+        content: attr(data-content);
+        position: absolute;
+        overflow: hidden;
+        max-width: 6em;
+        background: linear-gradient(to right, #6666ff, #0099ff, #00ff00, #ff3399, #6666ff);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        left: 400px;
+        background-size: 400% 100%;
+        animation: loading 7s linear, rainbow_animation 6s ease-in-out infinite;
+    }
+    
+    @keyframes loading {
+        from {
+            max-width: 0;
+        }
+    }
+    
+    .flex-container {
+        display: flex;
+    }
+    
+    .flex-container>h1 {
+        flex: 1;
+    }
+    
+    .shadowBox {
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.2);
+        /* Black w/opacity/see-through */
+        border: 3px solid;
+    }
+    
+    .rainbow {
+        background: linear-gradient(to right, #6666ff, #0099ff, #00ff00, #ff3399, #6666ff);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        animation: rainbow_animation 6s ease-in-out infinite;
+        background-size: 400% 100%;
+    }
+    
+    @keyframes rainbow_animation {
+        0%,
+        100% {
+            background-position: 0 0;
+        }
+        50% {
+            background-position: 100% 0;
+        }
+    }
+    
+    .slideInUp {
+        -webkit-animation-name: slideInUp;
+        animation-name: slideInUp;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+    
+    @-webkit-keyframes slideInUp {
+        0% {
+            -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+            visibility: visible;
+        }
+        100% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes slideInUp {
+        0% {
+            -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+            visibility: visible;
+        }
+        100% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+    }
+    
+    .btn {
+        border: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transition: 0.3s ease-in-out;
+        font-size: 250%;
+    }
+    
+    .btn:hover {
+        border: none;
+        top: 50%;
+        left: 50%;
+        transition: 0.3s ease-in-out;
+        font-size: 255%;
+    }
+    
+    .btn:before {
+        border: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transition: 0.3s ease-in-out;
+        font-size: 250%;
+    }
+    
+    #particle-canvas {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .clickme {
+        position: absolute;
+        width: 470px;
+        left: 35%;
+        opacity: 0;
+        transition: 0.5s ease-in-out;
+        color: white;
+    }
+    
+    .clickme:hover {
+        transition: 0.5s ease-in-out;
+        opacity: 0.5;
+        color: white;
+        animation: pulse infinite 1s;
+    }
+    
+    @keyframes pulse {
+        0% {
+            transform: scale(0.95);
+        }
+        70% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(0.95);
+        }
+    }
