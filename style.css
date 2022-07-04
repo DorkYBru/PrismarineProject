@@ -49,7 +49,7 @@
         height: 143px;
         bottom: 0;
         Left: 0;
-        backgound: url('/asstes/waves/wave-top.png');
+        backgound: url('https://raw.githubusercontent.com/DorkYBru/PrismarineProject/main/asstes/waves/wave-top.png');
         animation: animate 10s linear infinite;
     }
     
@@ -57,7 +57,7 @@
         content: '';
         width: 100%;
         height: 143px;
-        background: url('/asstes/waves/wave-top-opacity.png');
+        background: url('https://github.com/DorkYBru/PrismarineProject/raw/main/asstes/waves/wave-top-opacity.png');
         position: absolute;
         top: 0;
         Left: 0;
@@ -69,7 +69,7 @@
         content: '';
         width: 100%;
         height: 143px;
-        background: url('/asstes/waves/wave-top-opacity.png');
+        background: url('https://github.com/DorkYBru/PrismarineProject/raw/main/asstes/waves/wave-top-opacity.png');
         position: absolute;
         top: 0;
         Left: 0;
